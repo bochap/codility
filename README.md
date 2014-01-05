@@ -1,0 +1,1 @@
+This repo includes all the code I wrote working on examples at codility.com to improve my programming using C#.
