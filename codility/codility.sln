@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrefixSums", "PrefixSums", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassingCars", "..\PrefixSums\PassingCars\PassingCars.csproj", "{62959AC5-BAEB-4D80-8325-364CD648DD4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenomicRangeQuery", "..\PrefixSums\GenomicRangeQuery\GenomicRangeQuery.csproj", "{73B7E063-1250-422D-B747-4486F45EF370}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{62959AC5-BAEB-4D80-8325-364CD648DD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62959AC5-BAEB-4D80-8325-364CD648DD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62959AC5-BAEB-4D80-8325-364CD648DD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B7E063-1250-422D-B747-4486F45EF370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B7E063-1250-422D-B747-4486F45EF370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B7E063-1250-422D-B747-4486F45EF370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B7E063-1250-422D-B747-4486F45EF370}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,5 +101,6 @@ Global
 		{F4C39180-E8B0-40A5-86CE-124789859FBE} = {65F8DD19-E7C9-4CA6-A3E3-0E4B0C68F1E2}
 		{F883C711-DA12-4598-BDDE-56A02A5DC72B} = {65F8DD19-E7C9-4CA6-A3E3-0E4B0C68F1E2}
 		{62959AC5-BAEB-4D80-8325-364CD648DD4E} = {E0B08A36-583C-4033-BA6B-0B368620BE66}
+		{73B7E063-1250-422D-B747-4486F45EF370} = {E0B08A36-583C-4033-BA6B-0B368620BE66}
 	EndGlobalSection
 EndGlobal
