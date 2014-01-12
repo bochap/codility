@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace NumberOfDiscIntersections
 {
@@ -17,13 +13,34 @@ namespace NumberOfDiscIntersections
         public int solution(int[] A)
         {
             // write your code in C# with .NET 2.0
-            var discs = new List<List<int>>();
-            for (var count = 0; count < A.Length; count++)
+            var length = A.Length;
+            if (A == null || length <= 1) return 0;
+            if (length > 100000) return -1;
+            var accumulator = new int[length, 2];
+            for (var count = 0; count < length; count++)
             {
-                discs.Add(new List<int>(new [] {count - A[count], count + A[count]}));
+                if (count < A[count]) accumulator[0, 0]++;
+                else accumulator[count - A[count], 0]++;
+
+                if (A[count] + count >= length) accumulator[length - 1, 1]++;
+                else accumulator[A[count] + count, 1]++;
             }
-            var sortedDiscs = sort(discs);
-            return -1;
+
+            var result = 0;
+            var open = 0; // 2
+            for (var count = 0; count < length; count++)
+            {
+                result += open * accumulator[count, 0] + (accumulator[count, 0] * (accumulator[count, 0] - 1)) / 2; // 3
+                if (result > 10000000)
+                {
+                    return -1;
+                }
+
+
+                open += accumulator[count, 0] - accumulator[count, 1]; // 4
+            }
+
+            return result;
         }
 
         public static List<List<int>> sort(List<List<int>> value)
