@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StacksAndQueues", "StacksAn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brackets", "..\StacksAndQueues\Brackets\Brackets.csproj", "{0F010B38-5680-40E1-B891-9AE085A092FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fish", "..\StacksAndQueues\Fish\Fish.csproj", "{FCE395B0-A416-4260-9311-980CBFAEF7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{0F010B38-5680-40E1-B891-9AE085A092FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F010B38-5680-40E1-B891-9AE085A092FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F010B38-5680-40E1-B891-9AE085A092FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE395B0-A416-4260-9311-980CBFAEF7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE395B0-A416-4260-9311-980CBFAEF7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE395B0-A416-4260-9311-980CBFAEF7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE395B0-A416-4260-9311-980CBFAEF7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,5 +140,6 @@ Global
 		{C225C08D-D4B8-4269-9C2A-A5D04AADD564} = {2C605020-8F5B-496F-A7FD-32EE797E1F82}
 		{0BB7AAAD-C766-4621-B5EF-621127CDE970} = {2C605020-8F5B-496F-A7FD-32EE797E1F82}
 		{0F010B38-5680-40E1-B891-9AE085A092FB} = {044B87D7-BBB2-42DB-B2E5-CFE0CDFDDBE6}
+		{FCE395B0-A416-4260-9311-980CBFAEF7BA} = {044B87D7-BBB2-42DB-B2E5-CFE0CDFDDBE6}
 	EndGlobalSection
 EndGlobal

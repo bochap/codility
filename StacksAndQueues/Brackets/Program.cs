@@ -53,6 +53,10 @@ namespace Brackets
                         return 0;
                 }
             }
+
+            if (stack.Count != 0)
+                return 0;
+
             return 1;
         }
     }
