@@ -1,0 +1,6 @@
+C:\Development\Personal\codility\CountingElements\MissingInteger\bin\Debug\MissingInteger.exe.config
+C:\Development\Personal\codility\CountingElements\MissingInteger\bin\Debug\MissingInteger.exe
+C:\Development\Personal\codility\CountingElements\MissingInteger\bin\Debug\MissingInteger.pdb
+C:\Development\Personal\codility\CountingElements\MissingInteger\obj\Debug\MissingInteger.csprojResolveAssemblyReference.cache
+C:\Development\Personal\codility\CountingElements\MissingInteger\obj\Debug\MissingInteger.exe
+C:\Development\Personal\codility\CountingElements\MissingInteger\obj\Debug\MissingInteger.pdb
