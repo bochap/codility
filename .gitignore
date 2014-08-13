@@ -38,5 +38,7 @@ Thumbs.db
 
 node_modules
 
-bin
-obj
+# VS Related
+**/bin
+**/obj
+**/*.user
