@@ -31,8 +31,14 @@ namespace MissingInteger
 
         static void Main(string[] args)
         {
-            Console.WriteLine(new Program().solution(new[] { 1, 2 }));
-            Console.WriteLine(new Program().solution(new[] { -0, -2, -3 }));
+            Console.WriteLine(new Program().solution(new[] { 2 }));
+            Console.WriteLine(new Program().solution(new[] { 5, 4, 0, 2 }));
+            Console.WriteLine(new Program().solution(new[] { 1, 3, 6, 4, 1, 2 }));
+            Console.WriteLine(new Program().solution(new[] { -2, 1, 2 }));
+            Console.WriteLine(new Program().solution(new[] { -22222222, 3, 100000000 }));
+            Console.WriteLine(new Program().solution(new[] { -22222222, 3, -12222222 }));
+            Console.WriteLine(new Program().solution(new[] { -100, -99, -1 }));
+            Console.WriteLine(new Program().solution(new[] { -22222222, -12222222 }));
             Console.ReadLine();
         }
 
@@ -55,68 +61,37 @@ namespace MissingInteger
                     minValue = A[count];
                 }
 
+                if (A[count] < 0)
+                {
+                    minValue = 0;
+                }
+
                 if (maxValue < A[count])
                 {
                     maxValue = A[count];
                 }
             }
 
-            var hasReversed = false;
-            var hasNegative = false;
-            if (minValue != maxValue && minValue < 0 && maxValue < 0)
-            {
-                minValue ^= maxValue;
-                maxValue ^= minValue;
-                minValue ^= maxValue;
-
-                minValue = Math.Abs(minValue);
-                maxValue = Math.Abs(maxValue);
-                hasReversed = true;
-            }
-
-            if (minValue < 0) {
-                minValue = 0;
-                hasNegative = true;
-            }
-
-            var offset = 0;
-            if (minValue >= 100000)
-                offset -= 100000;
-            
+            var offset = -minValue;
             var found = new bool[A.Length];
             var value = default(int);
             for (var count = 0; count < A.Length; count++)
             {
-                if (A[count] < 0)
-                {
-                    if (hasReversed) value = Math.Abs(A[count]);
-                    else value = 0;
-                }
-                else
-                {
-                    value = A[count];
-                }
-                value += offset;
-
+                value = A[count] + offset;
                 if (value >= A.Length) continue;
-                found[value] = true;
+                if (value < 0) found[0] = true;
+                else found[value] = true;
             }
             
-
-
             for (var count = 0; count < found.Length; count++)
             {
-                if (count >= minValue + offset)
+                if (found[count] == false)
                 {
-                    if (found[count] == false)
-                    {
-                        return count - offset;
-                    }
+                    var result = count - offset;
+                    return result;
                 }
             }
 
-
-            if (hasReversed || (maxValue == 1 && hasNegative)) return 1;
             return maxValue + 1;
         }
     }
