@@ -40,37 +40,30 @@ namespace stonewall
         public int solution(int[] H)
         {
             // write your code in C# 5.0 with .NET 4.5 (Mono)
-            var openBlocks = new Stack<int>();
+            var openBlocks = new int[H.Length];
+            var stackIndex = 0;
             var numOfBlocks = 0;
-            for (int index = 0; index < H.Length; index++)
-            {
-                var value = H[index];
-            }
             foreach (var value in H)
             {
-                if (openBlocks.Count == 0) {
-                    openBlocks.Push(value);
+                while (stackIndex > 0 && openBlocks[stackIndex - 1] > value)
+                {
+                    stackIndex--;
                 }
-                else {
-                    var lastValue = openBlocks.Peek();
-                    if (lastValue == value)
-                    {
-                        continue;
-                    }
-                    else if (lastValue > value)
-                    {
-                        do
-                        {
-                            openBlocks.Pop();
-                            numOfBlocks++;
-                        } while (openBlocks.Count > 0 && openBlocks.Peek() > value);
-                    }
-                    openBlocks.Push(value);
+
+                if (stackIndex > 0 && openBlocks[stackIndex - 1] == value)
+                {
+                    continue;
+                }
+                else
+                {
+                    openBlocks[stackIndex] = value;
+                    stackIndex++;
+                    numOfBlocks++;
                 }
             }
 
-            return numOfBlocks + openBlocks.Count;
-            
+            return numOfBlocks;
+
         }
     }
 }
